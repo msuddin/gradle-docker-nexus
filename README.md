@@ -2,22 +2,13 @@
 
 ## Purpose
 
-Question:
-What is the purpose of this project?
+Question: Is it possible to run a local instance of Nexus in a docker container and then load a .jar file into it?
 
 Answer:
-* Main application that boots itself as a spring boot web app
-* As it's a spring application, it automatically finds all rest controllers
-* Rest controller takes in a parameter
-* Rest controller is using a bean to create a hello api and then prints the name
-* Have used bean configuration annotation instead of XML configuration
-* Have created test that runs as part of build
-* Build also build's a jar and puts it in /build path
-* Using spring boot plugin in gradle file - when jar is built, all additional dependencies are added to the jar when using this plugin
-* build.gradle file also supplies start class (bootJar - get's executed as part of gradle build task)
-* A rest controller test that spins up the spring context and uses a rest test template to make calls to the api server
+* 
 
 ## Instructions
+### Building Jar
 Navigate to the root directory of this project and run the command below to run all the tests and build the jar:
 ```
 ./gradlew clean build
@@ -38,3 +29,5 @@ http://localhost:8080/hello/batman
 // Should see diplayed in the browser window:
 hello batman
 ```
+### Uploading Jar to Nexus
+

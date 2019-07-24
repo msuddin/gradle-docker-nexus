@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class HelloConfiguration {
 
     @Bean
-    public Hello account() {
+    public Hello hello() {
         return new Hello();
     }
 
