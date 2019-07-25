@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven'
     id 'org.springframework.boot' version '2.1.5.RELEASE'
 }
 
@@ -21,5 +22,15 @@ dependencies {
 bootJar {
     manifest {
         attributes 'Start-Class': 'com.thetestroom.Application'
+    }
+}
+
+uploadArchives {
+    repositories{
+        mavenDeployer {
+            repository(url: "http://localhost:8091/nexus/content/repositories/snapshots/") {
+                authentication(userName: "admin", password: "admin123")
+            }
+        }
     }
 }

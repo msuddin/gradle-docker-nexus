@@ -2,6 +2,6 @@ version: "3"
 
 services:
   nexus:
-    image: sonatype/nexus3:3.17.0
+    image: sonatype/nexus:2.14.13-01
     ports:
       - "8091:8081"
